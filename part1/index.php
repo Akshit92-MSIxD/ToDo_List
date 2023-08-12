@@ -164,7 +164,7 @@
 
           <div class="mb-3">
             <label for="title" class="form-label">Note title</label>
-            <input type="text"  id="title" name="title" required >
+            <input type="text"  id="title" name="title"  class=" form-floating form-control" required >
           </div>
           
           <div class="mb-3">
