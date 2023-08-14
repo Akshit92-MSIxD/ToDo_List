@@ -175,6 +175,11 @@
 
 </div>
 
+ 
+
+ <!-- Footer -->
+ <?php  require 'partials/_footer.php' ?>
+
 
 
   <!-- Including jquery -->

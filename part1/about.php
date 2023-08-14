@@ -46,6 +46,10 @@
             </article>
         </div>
     </div>
+
+
+     <!-- Footer -->
+    <?php  require 'partials/_footer.php' ?>
      
 
 
