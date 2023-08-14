@@ -16,7 +16,7 @@ echo'
 
     
   
-       <form action="/online_forum/partials/_handle-loginModal.php" method="post">
+       <form action="/ToDo-List/partials/_handle-loginModal.php" method="post">
 
                         <div class="mb-3">
                             <label for="loginEmail" class="form-label">Email </label>
