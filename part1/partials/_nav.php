@@ -5,7 +5,7 @@
 
 echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.php">iSecure</a>
+    <a class="navbar-brand" href="index.php">iNotes</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -58,11 +58,11 @@ echo' </div>
 </div>
 </nav>';
 
-// require '_loginModal.php';
-// require '_logoutModal.php';
-// require '_signupModal.php';
+require '_loginModal.php';
+require '_logoutModal.php';
+require '_signupModal.php';
 
-// require '_alerts.php';
+require '_alerts.php';
 
 
 

@@ -15,7 +15,7 @@
  $servername = "localhost"; // Credentidals required to connect to the DB!!!
  $username = "root";
  $password = "";
- $database = "akshit";
+ $database = "inotes";
 
 
         // -----> Create a connection :
