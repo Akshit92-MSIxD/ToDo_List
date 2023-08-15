@@ -6,7 +6,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['SnoDelete']))
   
   $SnoDelete = $_POST['SnoDelete'];
 
-  $query = " DELETE from `notes` where `Sno` = '$SnoDelete';";
+  $query = " DELETE from `notes` where `note_id` = '$SnoDelete';";
 
   $result = mysqli_query($conn,$query);
 

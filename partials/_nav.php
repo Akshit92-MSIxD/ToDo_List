@@ -16,20 +16,15 @@ echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <a class="nav-link active" aria-current="page" href="index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/ToDo-List/part1/about.php">About</a>
+          <a class="nav-link" href="/ToDo-List/about.php">About</a>
         </li>';
 
 
     echo'    
         <li class="nav-item">
-          <a class="nav-link" href="/ToDo-List/part1/contact.php">Contact</a>
+          <a class="nav-link" href="/ToDo-List/contact.php">Contact</a>
         </li>
       </ul>';
-
-    echo'<form  action="/ToDo-List/part1/search.php"  method="get" class="d-flex mx-3" role="search">
-    <input class="form-control me-2" name="search" id="search" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-success" type="submit">Search</button>
-    </form>';
 
 
 

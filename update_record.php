@@ -8,7 +8,7 @@
     $editTitle = $_POST['editTitle'];
     $editdesc = $_POST['editdesc'];
     
-    $query = "UPDATE `notes` SET `Title` = '$editTitle' , `Description` = '$editdesc' where `notes`.`Sno` = '$SnoEdit' ";
+    $query = "UPDATE `notes` SET `note_title` = '$editTitle' , `note_desc` = '$editdesc' where `note_id` = '$SnoEdit' ";
     
     $result = mysqli_query($conn,$query);
     
