@@ -7,7 +7,7 @@
   $desc = $_POST['desc'];
   
   
-  $query = "INSERT into `notes`(`Title`,`Description`,`Tstamp`) values('$title','$desc',current_timestamp())";
+  $query = "INSERT into `notes`(`note_title`,`note_desc`,`note_creator`) values('$title','$desc','xyz@gmail.com')";
   
   $result = mysqli_query($conn,$query);
   
