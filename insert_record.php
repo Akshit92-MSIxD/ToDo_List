@@ -5,9 +5,10 @@
   
   $title = $_POST['title'];
   $desc = $_POST['desc'];
+  $note_creator = $_SESSION['loggedin_email'];
   
   
-  $query = "INSERT into `notes`(`note_title`,`note_desc`,`note_creator`) values('$title','$desc','xyz@gmail.com')";
+  $query = "INSERT into `notes`(`note_title`,`note_desc`,`note_creator`) values('$title','$desc','$note_creator')";
   
   $result = mysqli_query($conn,$query);
   

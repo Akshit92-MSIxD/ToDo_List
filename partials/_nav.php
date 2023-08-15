@@ -59,10 +59,4 @@ require '_signupModal.php';
 
 require '_alerts.php';
 
-
-
-
-
-
-
 ?>

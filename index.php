@@ -1,22 +1,4 @@
 
-<?php
-
-// Connecting to MYSQL DB :
-   require 'partials/_DBconnect.php';
-
-// Insert into table  of "akshit" DB in MYSQL :
-   require 'insert_record.php';
-
-// Updating existing record/note into MYSQL DB
-   require 'update_record.php';
-
-// Deleting existing record from MYSQL DB
-   require 'delete_record.php'
-
-?>
-
-
-
 <!doctype html>
 
 <html lang="en">
@@ -33,12 +15,31 @@
 
   </head>
 
-
-
   <body>
 
+  <!-- Connecting to MYSQL DB : -->
+     <?php require 'partials/_DBconnect.php'; ?>
+
   <!-- Navigation header -->
-  <?php  require 'partials/_nav.php' ?> ; 
+     <?php  require 'partials/_nav.php'; ?>  
+
+  <?php
+
+    if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)
+    {
+   
+
+    // Insert into table  of "akshit" DB in MYSQL :
+      require 'insert_record.php';
+
+    // Updating existing record/note into MYSQL DB
+      require 'update_record.php';
+
+    // Deleting existing record from MYSQL DB
+      require 'delete_record.php';
+    }
+
+  ?>
 
   
   <!-- Modal(visible only when it is triggered by a button!!!) for Edit button -->
@@ -118,8 +119,8 @@
 
 
    <!-- Form taking notes -->
-
-      <div class="container my-4">
+  <?php 
+      echo'<div class="container  mt-5 mb-5">
         <h2> Add a Note </h2>
         <form my-4 action="index.php" method="post">
 
@@ -131,13 +132,22 @@
           <div class="mb-3">
             <label for="desc" class="form-label">Note Description</label><br>
               <textarea class=" form-floating form-control"  id="desc" name="desc" required></textarea>
-          </div>
+          </div>';
 
-          <button type="submit" class="btn btn-primary">Add Note</button>
+          if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)
+          {    
+          echo'<button type="submit" class="btn btn-primary">Add Note</button>';
+          }
+          else{
+            echo'<button type="submit" class="btn btn-primary disabled">Add Note</button>';
+            echo'<p class="lead text-secondary">You are not loggedin!!! Please login to be able to add notes.</p>';
+          }
+
+        echo'  
         </form>
+    </div>';
 
-      </div>
-
+    ?>
 
 
 
@@ -163,9 +173,12 @@
             <tbody>
 
                 <?php
-                  
+
+                 if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)  
+                 {
                   // Selecting records from MYSQL DB and display it in a table
                      require "fetch-display_record.php";
+                 }
 
                   ?>
           

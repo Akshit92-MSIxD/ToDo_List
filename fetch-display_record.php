@@ -1,7 +1,8 @@
 <?php
 
+  $note_creator = $_SESSION['loggedin_email'];
 
-    $sql = "SELECT * from `notes`;";
+    $sql = "SELECT * from `notes` where `note_creator` = '$note_creator';";
     $result = mysqli_query($conn,$sql);
 
     $num = mysqli_num_rows($result);

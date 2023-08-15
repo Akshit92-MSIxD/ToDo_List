@@ -39,12 +39,9 @@ echo'<!-- Button trigger modal is signup button!!! -->
       </div>
     </div>
   </div>
-</div>'
+</div>';
 
 ?>
-
-
-<?php
 
 
 
