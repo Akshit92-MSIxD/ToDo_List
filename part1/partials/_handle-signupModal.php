@@ -3,7 +3,7 @@
   if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['signupEmail']) )
   {
 
-   require '_dbconnect.php';
+   require '_DBconnect.php';
     
     $name = $_POST['name'];
     $email = $_POST['signupEmail'];
@@ -14,7 +14,7 @@
    
      $exists = false;
 
-     $existQuery = "SELECT * from `users` where `email` = '$email' ";
+     $existQuery = "SELECT * from `users` where `user_email` = '$email' ";
 
      $result = mysqli_query($conn,$existQuery);
 
@@ -29,7 +29,7 @@
      {
           $hash = password_hash($signupPassword,PASSWORD_DEFAULT);
 
-          $insert_query = "INSERT into `users`(`user_name`,`email`,`password`,`timestamp`) values('$name','$email','$hash',current_timestamp());";
+          $insert_query = "INSERT into `users`(`user_name`,`user_email`,`user_password`,`timestamp`) values('$name','$email','$hash',current_timestamp());";
 
           $result = mysqli_query($conn,$insert_query);
 

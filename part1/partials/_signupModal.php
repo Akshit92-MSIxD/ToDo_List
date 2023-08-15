@@ -12,7 +12,7 @@ echo'<!-- Button trigger modal is signup button!!! -->
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      <form action="/ToDo-List/partials/_handle-signupModal.php" method="post">
+      <form action="partials/_handle-signupModal.php" method="post">
 
                           <div class="mb-3">
                           <label for="name" class="form-label">Name</label>

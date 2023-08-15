@@ -212,6 +212,13 @@
   <!-- Script containing Delete button functionality-->
   <script src = "/ToDo-List/Javascript/Delete_btn.js"> </script>
 
+  
+  <script>
+    
+    setTimeout(()=>{  $(".alert").alert('close');} , 4000);
+
+   </script>
+
 
   </body>
 </html>

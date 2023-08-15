@@ -2,7 +2,7 @@
 
 if($_SERVER['REQUEST_METHOD'] == 'POST')
 {
-     require '_dbconnect.php';
+     require '_DBconnect.php';
 
      $email = $_POST['loginEmail']; 
      $password = $_POST['loginPassword'];
@@ -10,7 +10,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 
      // Check whether this account exits in the users table or not
 
-     $check_query = "SELECT * from `users` where `email` = '$email';";
+     $check_query = "SELECT * from `users` where `user_email` = '$email';";
 
      $result = mysqli_query($conn,$check_query);
 
@@ -23,7 +23,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 
         $row = mysqli_fetch_assoc($result);
 
-        if(password_verify($password,$row['password']))
+        if(password_verify($password,$row['user_password']))
         {
             session_start();
                                                       
