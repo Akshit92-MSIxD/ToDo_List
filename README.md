@@ -6,6 +6,6 @@ iNotes is a todolist website where you can create , update , delete your Notes :
 -- FRONTEND : HTML , CSS , Javascript , Jquery and Bootstrap \
 -- BACKEND  : PHP and MYSQL database
 
-# Hosted on 000webhost.com :
+# Hosted on infinityfree.com :
 http://inotescrud.infinityfreeapp.com/index.php
 
